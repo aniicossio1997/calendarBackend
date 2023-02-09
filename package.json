@@ -2,13 +2,14 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "tsc && node dist/app.js",
+    "start": "ts-node-dev ./src/index.ts",
     "dev": "ts-node-dev ./src/index.ts",
     "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "build": "rimraf ./build && tsc",
   "keywords": [],
   "author": "",
   "license": "ISC",
