@@ -6,11 +6,13 @@ import routerAuth from "../routes/auth.routes";
 import morgan from "morgan";
 import routerEvents from "../routes/events.routes";
 import routerUserEvents from "../routes/userEvents.routes";
+import routerIndex from "../routes/index.routes";
 class Server {
   private app: Application;
   private port: string;
   private apiPath = {
-    index: "/",
+    index: "",
+    indexAPI:"/api",
     users: "/api/users",
     events: "/api/events",
     usersEvents: "/api/users",
@@ -31,7 +33,8 @@ class Server {
     });
   }
   routes() {
-    this.app.use(this.apiPath.index, router);
+    this.app.use(this.apiPath.index, routerIndex);
+    this.app.use(this.apiPath.indexAPI,routerIndex)
     this.app.use(this.apiPath.events, routerEvents);
     this.app.use(this.apiPath.users, routerUsers);
     this.app.use(this.apiPath.auth, routerAuth);
