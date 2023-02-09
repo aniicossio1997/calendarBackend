@@ -1,7 +1,5 @@
 # calendarBackend
 
-### BACKEND
-
 ### Librerias del Backend:
 
 - node
