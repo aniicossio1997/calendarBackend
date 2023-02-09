@@ -1,9 +1,14 @@
 # calendarBackend
 
-# Calendar-fullstack
+### Librerias del Backend:
 
+- node
+- express
+- typescript
+- mongoose
+- mongoDB
+- moment
 
-### BACKEND
 # Endpoint
 ----------
 
@@ -31,13 +36,3 @@
 | GET | /api/users/**:user**/events/**:id** | Devuelve un evento en especifico,  perteneciente a un usuario `(es necesario contar con el token)` |
 | PUT | /api/users/**:user**/events/**:id** | Actualiza un evento perteneciente a un usuario `(es necesario contar con el token)` |
 | DELETE | /api/users/**:user**/events/**:id** | Elimina un evento perteneciente a un usuario `(es necesario contar con el token)` |
-
-
-### Librerias del Backend:
-
-- node
-- express
-- typescript
-- mongoose
-- mongoDB
-- moment
